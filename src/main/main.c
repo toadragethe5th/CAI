@@ -79,4 +79,11 @@ int main {
 
     char *lower(char *corpus);
     char *nosymbol = removeSymbols(*lower);
+    char *nostopwords = char *removeStopwords(nosymbol);
+    EMBEDDING *model = createModel();
+    train(model, nostopwords, 2, 4, 0.01, 10, 1, true);
+    extractEmbeddings(model);
+    
 }
+
+
